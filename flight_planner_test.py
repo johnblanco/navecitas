@@ -41,3 +41,10 @@ class FlightPlanTest(unittest.TestCase):
         res = flight_plan_to_target(shipyard_position, kore_position)
 
         self.assertEqual('N2S', res)
+
+    def test_flight_plan_to_kore_6(self):
+        shipyard_position = Point(10, 10)
+        kore_position = Point(0, 4)
+        res = flight_plan_to_target(shipyard_position, kore_position)
+
+        self.assertEqual('como deberia ser la ruta? N5E10S5W tiene 8 caracteres!!', res)
